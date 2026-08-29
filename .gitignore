@@ -1,0 +1,44 @@
+# LaTeX
+latex/
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.idx
+*.ind
+*.lof
+*.lot
+*.log
+*.out
+*.toc
+*.run.xml
+*.synctex.gz
+
+# Manuscript (not shared at this stage)
+manuscript/
+
+# Data and generated outputs
+data/*
+!data/.gitkeep
+output/*
+!output/.gitkeep
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Editor / OS
+.cursorindexingignore
+.DS_Store
+Thumbs.db
+~$*
+
+# Temporary prep scripts / local-only notebooks (not part of public release)
+scripts/_*.py
+scripts/_*.ipynb
