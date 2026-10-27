@@ -1,4 +1,4 @@
-# Large Language Models for Mental Health Self-Assessment by the General Public: A Randomized Preregistered Study
+# Effects of Consumer Large Language Models on Lay Judgments of Mental Health Vignettes: A Randomized Preregistered Study
 
 Analysis code for the preregistered randomized experiment described above.
 
