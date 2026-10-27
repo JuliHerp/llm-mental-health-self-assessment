@@ -23,6 +23,8 @@ This repository contains analysis code only. The manuscript, figures, and partic
 
 The de-identified dataset will be made publicly available upon acceptance of the associated manuscript. Until then, the notebooks expect data files in `data/` relative to the repository root (principally `Psy_Case_Vignette_Data_Prolific_analysis.xlsx`, which includes transcript length/validation, plus standalone benchmark files referenced at the top of each notebook).
 
+`condition_fuzzy_scoring.ipynb` reads that analysis file and writes a disagreement workbook and an agreement summary into `data/`. Those files contain response text and are not tracked.
+
 ## Requirements
 
 - **Python** 3.12+ (see `requirements.txt`)
@@ -55,6 +57,7 @@ Notebooks write figures to `manuscript/Figures/` and auxiliary outputs to `outpu
 | `transcript_length_validation_analysis.ipynb` | Transcript length and verification categories |
 | `triage_llm_trajectories.ipynb` | Triage transition analysis (LLM conditions) |
 | `standalone_model_performance.ipynb` | Standalone model vs. human-assisted benchmarks |
+| `condition_fuzzy_scoring.ipynb` | Automated fuzzy coding of condition responses against the coding-key terms |
 
 ## License
 
