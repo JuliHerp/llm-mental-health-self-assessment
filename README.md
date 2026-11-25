@@ -9,11 +9,11 @@ Analysis code for the preregistered randomized experiment described above.
 
 | Path | Description |
 |------|-------------|
-| `scripts/` | Jupyter notebooks for the analyses on the analysis sample |
+| `scripts/` | Jupyter notebooks for the reported analyses |
 | `data/` | Study data (**not included**; see below) |
 | `output/` | Generated tables and figures (local only; not tracked) |
 
-This repository contains analysis code only. The manuscript, figures, and participant-level dataset are not shared at this stage.
+This repository contains the analysis code for the reported results. The manuscript, figures, and participant-level dataset are not shared at this stage.
 
 ### Not included
 
@@ -21,9 +21,9 @@ This repository contains analysis code only. The manuscript, figures, and partic
 
 ## Data availability
 
-The de-identified dataset will be made publicly available upon acceptance of the associated manuscript. Until then, the notebooks expect data files in `data/` relative to the repository root (principally `Psy_Case_Vignette_Data_Prolific_analysis.xlsx`, which includes transcript length/validation, plus standalone benchmark files referenced at the top of each notebook).
+The de-identified dataset will be made publicly available upon acceptance of the associated manuscript. Until then, the notebooks expect data files in `data/` relative to the repository root (principally `Psy_Case_Vignette_Data_Prolific_analysis.xlsx`, which includes transcript length and verification, plus standalone benchmark files referenced at the top of each notebook).
 
-`condition_fuzzy_scoring.ipynb` reads that analysis file and writes a disagreement workbook and an agreement summary into `data/`. Those files contain response text and are not tracked.
+`observed_attrition_build_sample.ipynb` also reads `Psy_Case_Vignette_Data_Prolific_dropouts.xlsx` and writes `Psy_Case_Vignette_Data_Prolific_observed_attrition.xlsx`. `interrater_reliability.ipynb` reads the second-rater key and the returned codes from `output/`. Those files contain response text and are not tracked.
 
 ## Requirements
 
@@ -50,14 +50,15 @@ Notebooks write figures to `manuscript/Figures/` and auxiliary outputs to `outpu
 | Notebook | Purpose |
 |----------|---------|
 | `participants.ipynb` | Participant characteristics and control-condition resource use |
-| `vignette_performance.ipynb` | Vignette-level accuracy and confidence (pre/post) |
-| `pre_post_mixed_effect_models.ipynb` | GLMMs for pre-to-post accuracy by condition |
-| `confidence_mixed_effect_models.ipynb` | Mixed models for confidence change by trajectory |
-| `change_in_confidence.ipynb` | Confidence change visualization |
+| `vignette_performance.ipynb` | Vignette-level accuracy and confidence before and after consultation |
+| `pre_post_mixed_effect_models.ipynb` | GLMMs for pre-to-post accuracy by study condition |
+| `observed_attrition_build_sample.ipynb` | Analysis sample plus assigned participants who did not finish |
+| `observed_attrition_mixed_effect_models.ipynb` | Accuracy models for all assigned participants and the Perplexity tipping point |
+| `joint_confidence_models.ipynb` | Change in the single confidence rating by study condition |
+| `confidence_mixed_effect_models.ipynb` | Exploratory confidence change by accuracy trajectory |
 | `transcript_length_validation_analysis.ipynb` | Transcript length and verification categories |
-| `triage_llm_trajectories.ipynb` | Triage transition analysis (LLM conditions) |
-| `standalone_model_performance.ipynb` | Standalone model vs. human-assisted benchmarks |
-| `condition_fuzzy_scoring.ipynb` | Automated fuzzy coding of condition responses against the coding-key terms |
+| `standalone_model_performance.ipynb` | Standalone model benchmarks compared with participant accuracy |
+| `interrater_reliability.ipynb` | Agreement between the primary codes and a second rater |
 
 ## License
 
